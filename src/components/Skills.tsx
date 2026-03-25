@@ -11,6 +11,14 @@ import {
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 
+const skills = [
+  "Node.js","Express.js","Fastify","ASP.NET Core","ABP Framework","Entity Framework",
+  "SQL Server","PostgreSQL","MongoDB","Snowflake",
+  "Angular","React","JavaScript","TypeScript",
+  "Azure","AWS","Docker","CI/CD","GitHub Actions","Jenkins",
+  "Visual Studio","VS Code","Postman","Git","Bitbucket","Asana"
+];
+
 const skillCategories = [
   {
     title: "Backend",
@@ -115,22 +123,45 @@ export function Skills() {
             <Code2 className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
             <span className="font-mono text-xs sm:text-sm text-muted-foreground">skills.ts</span>
           </div>
-          <pre className="font-mono text-xs sm:text-sm text-muted-foreground overflow-x-auto">
-            <code>
-{`const sreejith = {
-  languages: ["TypeScript", "JavaScript", "C#", "SQL"],
-  frameworks: {
-    backend: ["Node.js", "Express.js", "Fastify", "ASP.NET Core"],
-    frontend: ["Angular", "React"]
-  },
-  databases: ["SQL Server", "PostgreSQL", "MongoDB", "Snowflake"],
-  cloud: ["Azure", "AWS"],
-  currentFocus: "Building scalable enterprise systems"
-};`}
-            </code>
-          </pre>
         </motion.div>
+          <div className="relative flex flex-wrap justify-center gap-3 mt-8">
+          {skills.map((skill, index) => (
+            <motion.div
+              key={skill}
+              className="px-4 py-2 rounded-full 
+              bg-gradient-to-br from-primary/20 to-secondary/20 
+              border border-primary/30 
+              text-xs sm:text-sm font-mono text-primary 
+              backdrop-blur-lg shadow-md cursor-default"
+
+           initial={{
+                  y: random(index),
+                  x: random(index + 1),
+                }}
+              animate={{
+                y: [0, -15, 0],
+                x: [0, 10, -10, 0],
+              }}
+              transition={{
+                duration: 4 + Math.random() * 2,
+                repeat: Infinity,
+              }}
+
+              whileHover={{
+                scale: 1.1,
+                boxShadow: "0 0 20px rgba(0, 200, 255, 0.4)",
+              }}
+            >
+              {skill}
+            </motion.div>
+          ))}
+        </div>
+
       </div>
     </section>
   )
+}
+
+const random = (seed: number) => {
+  return Math.sin(seed) * 20
 }

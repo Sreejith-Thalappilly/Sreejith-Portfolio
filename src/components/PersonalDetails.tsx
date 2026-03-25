@@ -3,6 +3,7 @@ import { Github, Linkedin, Download, ArrowDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import profile from "../assets/profile.jpeg"
+import { FloatingParticles } from "@/components/FloatingParticles"
 
 const techStack = [
   "Node.js",
@@ -39,9 +40,10 @@ export function PersonalDetails() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
       {/* Animated Background */}
-      <div className="absolute inset-0 overflow-hidden">
+    <div className="absolute inset-0 z-0 overflow-hidden">
+        <FloatingParticles />
         <motion.div 
-          className="absolute top-1/4 -left-1/4 w-64 sm:w-80 md:w-96 h-64 sm:h-80 md:h-96 bg-primary/10 rounded-full blur-3xl"
+          className="absolute z-10 top-1/4 -left-1/4 w-64 sm:w-80 md:w-96 h-64 sm:h-80 md:h-96 bg-primary/10 rounded-full blur-3xl"
           animate={{ 
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.5, 0.3],
@@ -53,7 +55,7 @@ export function PersonalDetails() {
           }}
         />
         <motion.div 
-          className="absolute bottom-1/4 -right-1/4 w-64 sm:w-80 md:w-96 h-64 sm:h-80 md:h-96 bg-primary/5 rounded-full blur-3xl"
+          className="absolute z-10 bottom-1/4 -right-1/4 w-64 sm:w-80 md:w-96 h-64 sm:h-80 md:h-96 bg-primary/5 rounded-full blur-3xl"
           animate={{ 
             scale: [1.2, 1, 1.2],
             opacity: [0.2, 0.4, 0.2],
@@ -264,7 +266,6 @@ export function PersonalDetails() {
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
           >
-            <ArrowDown className="h-5 w-5 sm:h-6 sm:w-6" />
           </motion.a>
         </motion.div>
       </motion.div>

@@ -24,6 +24,8 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 199 89% 48%;
     --radius: 0.5rem;
+    --particle-color: 220 90% 50%; 
+    --particle-glow: 199 89% 60%;
   }
 
   .dark {
@@ -46,6 +48,8 @@
     --border: 215 28% 17%;
     --input: 215 28% 17%;
     --ring: 199 89% 48%;
+    --particle-color: 210 100% 70%;
+    --particle-glow: 200 100% 80%;
   }
 }
 

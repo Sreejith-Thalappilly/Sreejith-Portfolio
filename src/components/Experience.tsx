@@ -47,7 +47,6 @@ export function Experience() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
         >
-          <p className="text-primary font-mono text-xs sm:text-sm">{"// Experience"}</p>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground">
             Work History
           </h2>
