@@ -1,4 +1,4 @@
-import { useMotionValue, useTransform } from "framer-motion"
+import { useMotionValue } from "framer-motion"
 import { useEffect } from "react"
 
 const mouseX = useMotionValue(0)
