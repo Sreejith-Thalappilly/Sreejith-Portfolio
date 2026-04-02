@@ -6,7 +6,6 @@ import {
   Layout, 
   Cloud, 
   Wrench,
-  Code2
 } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -120,8 +119,7 @@ export function Skills() {
           transition={{ duration: 0.5, delay: 0.5 }}
         >
           <div className="flex items-center gap-2 mb-3 sm:mb-4">
-            <Code2 className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
-            <span className="font-mono text-xs sm:text-sm text-muted-foreground">skills.ts</span>
+            <span className="font-mono text-xs sm:text-sm text-muted-foreground">Skills</span>
           </div>
         </motion.div>
           <div className="relative flex flex-wrap justify-center gap-3 mt-8">
